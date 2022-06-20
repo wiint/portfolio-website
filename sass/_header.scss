@@ -1,7 +1,7 @@
 header {
   .container {
     @include flex(center, space-between);
-    height: 5rem;
+    height: 8rem;
   }
 
   a {

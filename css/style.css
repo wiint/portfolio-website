@@ -81,7 +81,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: 8rem;
 }
 header a {
   text-decoration: none;
