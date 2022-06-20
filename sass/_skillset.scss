@@ -1,0 +1,27 @@
+.skillset {
+  .tech-container {
+    @include flex(center, center);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .stack-container {
+    @include flex(center, center);
+    flex-direction: column;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 0.2rem;
+    background-color: var(--bg-alt);
+
+    i {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      background-color: unset;
+    }
+
+    span {
+      font-weight: 500;
+      background-color: unset;
+    }
+  }
+}

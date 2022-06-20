@@ -1,0 +1,30 @@
+.contact {
+  text-align: left;
+
+  .contact-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .contact-item {
+    @include flex(center, center);
+    margin-bottom: 1.5rem;
+
+    @include media(mobile) {
+      justify-content: flex-start;
+    }
+
+    i {
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

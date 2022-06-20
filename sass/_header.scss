@@ -1,0 +1,89 @@
+header {
+  .container {
+    @include flex(center, space-between);
+    height: 5rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: inherit;
+  }
+
+  .nav-logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  nav {
+    @include flex(center, space-between);
+  }
+
+  ul {
+    list-style-type: none;
+    @include flex(center, center);
+  }
+
+  li {
+    position: relative;
+    margin-right: 1.5rem;
+    font-weight: 500;
+    text-transform: lowercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0.15rem;
+      bottom: -5px;
+      background-color: var(--primary);
+      transition: width 0.2s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  button {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .navbar-toggler {
+    display: none;
+    margin-left: 1rem;
+    color: var(--primary);
+    z-index: 2;
+  }
+
+  @include media(mobile) {
+    & {
+      height: 5rem;
+    }
+
+    .navbar-toggler {
+      display: block;
+    }
+
+    ul {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      @include flex(center, center);
+      flex-direction: column;
+      display: none;
+      z-index: 2;
+    }
+
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .show-nav {
+    display: flex;
+  }
+}
