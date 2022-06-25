@@ -23,7 +23,6 @@
   box-sizing: border-box;
   border: 0;
   font-style: inherit;
-  background-color: inherit;
   color: inherit;
 }
 
@@ -31,6 +30,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: var(--fg);
+  transition: background-color 0.2s;
 }
 
 html {
@@ -62,9 +62,9 @@ section {
 
   &::after {
     content: "";
-    border-bottom: 0.2em solid var(--primary);
+    border-bottom: 0.2rem solid var(--primary);
     display: block;
-    margin: 0.1em auto 0;
-    width: 1.5em;
+    margin: 0.1rem auto;
+    width: 3em;
   }
 }

@@ -5,15 +5,19 @@ const navItem = document.querySelectorAll(".nav-item");
 const themeToggler = document.querySelector(".theme-toggler");
 const themeTogglerIcon = document.querySelector(".theme-toggler-icon");
 
+const isDark = () => localStorage.getItem("portfolio-theme") === "dark";
+
 // set theme modes
 if (!localStorage.getItem("portfolio-theme")) {
   body.classList.add("light");
   localStorage.setItem("portfolio-theme", "light");
+  themeTogglerIcon.classList.add("fa-moon");
 } else {
   body.classList.add(localStorage.getItem("portfolio-theme"));
+  isDark()
+    ? themeTogglerIcon.classList.add("fa-sun")
+    : themeTogglerIcon.classList.add("fa-moon");
 }
-
-const isDark = () => localStorage.getItem("portfolio-theme") === "dark";
 
 navToggler.addEventListener("click", () => {
   ul.classList.toggle("show-nav");

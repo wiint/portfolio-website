@@ -31,7 +31,6 @@
   box-sizing: border-box;
   border: 0;
   font-style: inherit;
-  background-color: inherit;
   color: inherit;
 }
 
@@ -39,6 +38,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: var(--fg);
+  transition: background-color 0.2s;
 }
 
 html {
@@ -71,10 +71,10 @@ section {
 }
 .section-title::after {
   content: "";
-  border-bottom: 0.2em solid var(--primary);
+  border-bottom: 0.2rem solid var(--primary);
   display: block;
-  margin: 0.1em auto 0;
-  width: 1.5em;
+  margin: 0.1rem auto;
+  width: 3em;
 }
 
 header .container {
@@ -124,6 +124,7 @@ header li:hover::before {
 header button {
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: inherit;
 }
 header .navbar-toggler {
   display: none;
@@ -139,11 +140,12 @@ header .navbar-toggler {
     display: block;
   }
   header ul {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,16 +238,24 @@ header .show-nav {
 
 .projects .project-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
 }
 .projects .project-container .project-card {
   position: relative;
   background-color: var(--bg-alt);
   height: 15rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.projects .project-container .project-card img {
+  transition: transform 0.4s;
 }
 .projects .project-container .project-card:hover .project-info {
   opacity: 1;
+}
+.projects .project-container .project-card:hover img {
+  transform: scale(1.05);
 }
 .projects .project-container .project-info {
   position: absolute;
@@ -258,14 +268,15 @@ header .show-nav {
   text-align: center;
   padding: 1.5rem;
   opacity: 0;
-  transition: 0.2s opacity;
+  transition: 0.45s opacity;
   box-shadow: var(--shadow);
 }
 .projects .project-container .project-info p {
   margin: 0.5rem 0rem;
+  font-weight: 500;
 }
 .projects .project-container .project-info span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 .projects img {
   width: 100%;
@@ -280,14 +291,19 @@ header .show-nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 .projects span {
   margin-right: 0.5rem;
 }
+.projects .cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 .projects a {
   font-size: 1.2rem;
-  margin-right: 1rem;
 }
 
 .skillset .tech-container {
