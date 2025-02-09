@@ -26,13 +26,20 @@ export default function Projects() {
                 <span className='text-black dark:text-white font-medium tracking-tight'>
                   {project.title}
                 </span>
-                {/* <span className='text-neutral-600 dark:text-neutral-400 tabular-nums text-sm'>
-                  {project.year}
-                </span> */}
               </div>
               <p className='prose prose-neutral dark:prose-invert pt-3'>
                 {project.description}
               </p>
+              <div className='flex gap-2 pt-2'>
+                {project.teachStack.map((tech) => (
+                  <div
+                    key={tech}
+                    className='rounded-md border border-gray-400 dark:border-[#636363] px-2.5 py-0.5 text-xs font-semibold text-black dark:text-white'
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
             </div>
           </a>
         ))}

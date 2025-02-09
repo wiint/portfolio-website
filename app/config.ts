@@ -2,7 +2,6 @@ export const metaData = {
   baseUrl: 'https://wintphyopaing.vercel.app/',
   title: 'Wint',
   name: 'Wint',
-  ogImage: '/opengraph-image.png',
   description: 'Software person',
 };
 

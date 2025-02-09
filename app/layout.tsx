@@ -11,20 +11,14 @@ import './global.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
+  alternates: {
+    canonical: '/',
+  },
   title: {
     default: metaData.title,
     template: `%s | ${metaData.title}`,
   },
   description: metaData.description,
-  openGraph: {
-    images: metaData.ogImage,
-    title: metaData.title,
-    description: metaData.description,
-    url: metaData.baseUrl,
-    siteName: metaData.name,
-    locale: 'en_US',
-    type: 'website',
-  },
   robots: {
     index: true,
     follow: true,
@@ -39,9 +33,6 @@ export const metadata: Metadata = {
   twitter: {
     title: metaData.name,
     card: 'summary_large_image',
-  },
-  icons: {
-    icon: '/favicon.ico',
   },
 };
 
