@@ -37,14 +37,23 @@ export const projects: Project[] = [
     url: 'https://www.new-vision-edu.com',
     teachStack: ['Nestjs', 'MySQL', 'TypeORM', 'NextJS'],
   },
+  // {
+  //   title: 'scholarconnect.asia',
+  //   year: 2024,
+  //   description:
+  //     'Empowering students to achieve their educational goals by providing access to over 10,000 scholarships, grants and financial aid opportunities.',
+  //   url: 'https://scholarconnect.asia',
+  //   teachStack: ['NestJS', 'PostgreSQL', 'NextJS'],
+  // },
   {
-    title: 'scholarconnect.asia',
-    year: 2024,
+    title: 'aungkhaingwinchampion.com',
+    year: 2023,
     description:
-      'Empowering students to achieve their educational goals by providing access to over 10,000 scholarships, grants and financial aid opportunities.',
-    url: 'https://scholarconnect.asia',
-    teachStack: ['NestJS', 'PostgreSQL', 'NextJS'],
+      'Empowering Aung Khaing Win, a fitness expert, to take his training services online. This platform helps him connect with clients and provide tailored fitness guidance from anywhere.',
+    url: 'https://aungkhaingwinchampion.com',
+    teachStack: ['NextJS', 'Tailwind CSS'],
   },
+
   {
     title: 'shwenoteapp.com',
     year: 2022,

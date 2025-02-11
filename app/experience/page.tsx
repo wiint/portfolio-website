@@ -32,9 +32,6 @@ export default function Experiences() {
                   {project.year}
                 </span>
               </div>
-              <p className='prose prose-neutral dark:prose-invert pt-3'>
-                {project.description}
-              </p>
             </div>
           </div>
         ))}
