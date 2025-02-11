@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     title: metaData.name,
     card: 'summary_large_image',
   },
+  verification: {
+    google: '7S7P8JsvoNg27B-PlFpazercGDy7KOieYMnNWQt1iSg',
+  },
 };
 
 const cx = (...classes: string[]) => classes.filter(Boolean).join(' ');
